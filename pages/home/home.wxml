@@ -1,3 +1,6 @@
 <!--pages/home/home.wxml-->
 <text class="title">小程序</text>
 <button size='mini'>按钮</button>
+
+<view>1.知识点1</view>
+<view>1111111</view>
