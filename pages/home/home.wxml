@@ -1,6 +1,13 @@
 <!--pages/home/home.wxml-->
-<text class="title">小程序</text>
-<button size='mini'>按钮</button>
+<text class="title">小程序数据绑定</text>
+ <!-- 1.小程序数据绑定 -->
+<view>Hello {{name}}</view>
+<view>年龄：{{age+2}}</view>
 
-<view>1.2知识点2</view>
-<view>2222222222</view>
+<!-- 2.小程序列表展示 -->
+<view wx:for="{{students}}">{{item.name}}--{{item.age}}--{{item.id}}</view>
+
+<!-- 3.点击事件监听 改变data值   -->
+<view>当前data值：{{counter}}</view>
+<button size="mini" bindtap="handleBtnClick">+</button>
+<button size="mini" bindtap="handleSubClick">-</button>

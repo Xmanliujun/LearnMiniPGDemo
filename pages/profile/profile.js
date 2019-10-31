@@ -1,36 +1,12 @@
-// pages/home/home.js
+// pages/profile/profile.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'My Name',
-    age:30,
-    students:[
-      { id: 1, name: 'a', age: 12 },
-      { id: 2, name: 'b', age: 13 },
-      { id: 3, name: 'c', age: 14 },
-      { id: 4, name: 'd', age: 15 },
-      { id: 5, name: 'e', age: 17 }
-    ],
-    counter:0
-  },
 
-  handleBtnClick(){
-    this.setData({
-      counter:this.data.counter + 1
-    })
-    console.log('btn 点击'+this.data.counter)
   },
-  handleSubClick(){
-    this.setData({
-
-      counter: this.data.counter -1
-    })
-    console.log('sub 点击'+this.data.counter)
-  },
-
 
   /**
    * 生命周期函数--监听页面加载

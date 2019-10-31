@@ -1,0 +1,46 @@
+<!-- 
+
+
+/**
+配置小程序
+Project.config.json 项目配置文件，比如项目名称、appid、小程序版本等其他相关设置
+在小程序开发工具右上角 详情 按钮中的设置
+
+Sitemap.json 配置微信内部搜索 可设置开关
+小程序根目录下的 sitemap.json 文件用于配置小程序及其页面是否允许被微信索引，文件内容为一个 JSON 对象，如果没有 sitemap.json ，则默认为所有页面都允许被索引；
+
+app.json 全局配置
+小程序根目录下的 app.json 文件用来对微信小程序进行全局配置。文件内容为一个 JSON 对象
+
+Page.json 页面配置
+每一个小程序页面也可以使用 .json 文件来对本页面的窗口表现进行配置。页面中配置项在当前页面会覆盖 app.json 的 window 中相同的配置项。文件内容为一个 JSON 对象
+
+*/ 
+
+/**
+版本tag分支
+git add .  加入本地git
+git commit -m  ‘更新代码 ’（’’里加提交备注）
+git tag 名称（+tag名称）
+git tag   可以查看所有tag
+
+git status    查看现在代码状态
+git log         查看所有提交
+git reset --hard 123123（hard后面空格+版本号，git log可以看到版本号）  强制回退到指定版本
+
+git push --tags  将本地的所有tag上传到github上，
+在对应的库里branch：master中可以看到所有上传的tag。
+
+获取对应tag的版本代码
+在网站库里下载按钮clone or dewnload复制下载地址,在电脑本地新建文件夹之后，从终端进入该文件夹
+输入：git clone https: //github.com/Xmanliujun/LearnMiniPGDemo.git 
+（加上下载地址https: //github.com/Xmanliujun/LearnMiniPGDemo.git）
+之后项目下载完成后就可以导入开发环境
+之后就可以切换开发环境中的tag版本的代码查看了
+git checkout tag名称 （checkout后面加上要切换到哪个tag的名称）
+
+*/ 
+
+
+
+ -->
