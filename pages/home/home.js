@@ -1,4 +1,13 @@
 // pages/home/home.js
+//getApp()获取App（）产生的实例对象
+const app = getApp()
+
+const aname = app.globalData.name
+console.log(app.globalData.name)
+
+const age = app.globalData.age
+console.log(app.globalData.age)
+
 Page({
 
   /**
@@ -14,7 +23,8 @@ Page({
       { id: 4, name: 'd', age: 15 },
       { id: 5, name: 'e', age: 17 }
     ],
-    counter:0
+    counter:0,
+    apName:"未获取"
   },
 
   handleBtnClick(){
@@ -31,6 +41,15 @@ Page({
     console.log('sub 点击'+this.data.counter)
   },
 
+  buttongetMyUserInfo(event){
+    console.log("获取授权")
+    console.log(event)
+  },
+  buttonGetappData(){
+    this.setData({
+      apName: aname
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

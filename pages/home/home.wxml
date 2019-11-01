@@ -11,3 +11,10 @@
 <view>当前data值：{{counter}}</view>
 <button size="mini" bindtap="handleBtnClick">+</button>
 <button size="mini" bindtap="handleSubClick">-</button>
+<!-- 4.获取用户信息 方法2，方法1在app.js中直接调用getUserInfo方法 -->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="buttongetMyUserInfo" >获取授权</button>
+<!-- 5.展示用户信息方法 -->
+<open-data type="userNickName"></open-data>
+<!-- <open-data type="userAvatarUrl"></open-data> -->
+
+<button size="mini" bindtap="buttonGetappData">获取app.js中数据--{{apName}}</button>

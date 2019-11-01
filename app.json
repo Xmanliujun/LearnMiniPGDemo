@@ -2,7 +2,45 @@
   "pages": [
     "pages/home/home",
     "pages/about/about",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/category/category"
   ],
-  "sitemapLocation": "sitemap69.json"
+  "sitemapLocation": "sitemap69.json",
+  "window": {
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "导航标题",
+    "backgroundColor": "#AAAAFF",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "home",
+        "iconPath": "assets/images/tabBar/m4.png",
+        "selectedIconPath": "assets/images/tabBar/m5.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "about",
+        "iconPath": "assets/images/tabBar/m8.png",
+        "selectedIconPath": "assets/images/tabBar/m9.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "profile",
+        "iconPath": "assets/images/tabBar/m0.png",
+        "selectedIconPath": "assets/images/tabBar/m1.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "category",
+        "iconPath": "assets/images/tabBar/m_.png",
+        "selectedIconPath": "assets/images/tabBar/ma.png"
+      }
+    ]
+  }
 }

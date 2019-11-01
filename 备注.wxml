@@ -1,5 +1,6 @@
 <!-- 
-
+小程序官方文档
+https://developers.weixin.qq.com/miniprogram/dev/component/
 
 /**
 配置小程序
@@ -11,9 +12,78 @@ Sitemap.json 配置微信内部搜索 可设置开关
 
 app.json 全局配置
 小程序根目录下的 app.json 文件用来对微信小程序进行全局配置。文件内容为一个 JSON 对象
+pages：【】中要配置页面的路径,可以手动添加文件路径，保存之后自动生成
+
 
 Page.json 页面配置
 每一个小程序页面也可以使用 .json 文件来对本页面的窗口表现进行配置。页面中配置项在当前页面会覆盖 app.json 的 window 中相同的配置项。文件内容为一个 JSON 对象
+
+导航设置
+ "window": {
+    "navigationBarBackgroundColor": "#ff5777",背景颜色
+    "navigationBarTextStyle": "white",标题颜色
+    "navigationBarTitleText": "导航标题",
+    "backgroundColor": "#AAAAFF",下拉后的背景颜色
+    "backgroundTextStyle": "dark",下拉提示状态
+    "enablePullDownRefresh": true 是否全局下拉功能
+  }
+  标题可以在界面中的json文件单独设置
+    "navigationBarTitleText": "导航标题",
+  下拉刷新功能 可以在界面json文件单独设置
+   "enablePullDownRefresh": true
+   ** 页面配置会覆盖全局配置**
+
+下导航设置 list最少两项，图片自己创建目录导入
+"tabBar": {
+    "selectedColor": "#ff5777", 选中字体颜色
+    "list": [
+      {
+        "pagePath": "pages/home/home",调整界面路径
+        "text": "home",标题
+        "iconPath": "assets/images/tabBar/m4.png",默认图片
+        "selectedIconPath": "assets/images/tabBar/m5.png" 选中图片
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "about",
+        "iconPath": "assets/images/tabBar/m8.png",
+        "selectedIconPath": "assets/images/tabBar/m9.png"
+      }
+    ]
+  }
+
+/**
+    app.js 文件 App方法中可以监听 界面生命周期，和获取用户信息、场景
+   * 当小程序启动，或从后台进入前台显示，会触发 onShow
+   */
+  onShow: function (options) {
+    //1.获取小程序的进入场景options.secen
+    console.log(options)
+    //2.获取用户信息
+    wx.getUserInfo({
+      success:function(res){
+        console.log(res)
+      }
+    })
+
+  },
+
+获取用户信息方法2 
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="buttongetMyUserInfo" >获取授权</button>
+
+  buttongetMyUserInfo(event){
+    console.log("获取授权")
+    console.log(event)
+  },
+
+App.js中定义的全局数据，可以在其他界面的js中获取到
+  App.js中方法 
+  globalData:{
+    name:'myName',
+    age:20
+  }
+  home.js中获取
+  
 
 */ 
 
@@ -40,6 +110,8 @@ git push --tags  将本地的所有tag上传到github上，
 git checkout tag名称 （checkout后面加上要切换到哪个tag的名称）
 
 */ 
+
+
 
 
 
