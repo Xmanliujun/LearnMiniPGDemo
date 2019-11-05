@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -102,6 +102,13 @@
 					"id": -1,
 					"name": "input组件",
 					"pathName": "pages/input/input",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "scrollview组件",
+					"pathName": "pages/scrollview/scrollview",
 					"scene": null
 				}
 			]

@@ -84,12 +84,15 @@ App.js中定义的全局数据，可以在其他界面的js中获取到
   }
   home.js中获取
 
-  /* 设置文字水平垂直居中 ，设置布局大小*/
+  /* 设置文字水平垂直居中 ，设置布局大小  在view.wxss中*/
   display: table-cell;
   vertical-align:middle;
   width: 200px;
   height: 100px;
 
+
+  共同属性：
+  id、class、style、hidden、data
 
 */ 
 

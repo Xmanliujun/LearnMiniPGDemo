@@ -1,0 +1,27 @@
+/* pages/scrollview/scrollview.wxss */
+.container1{
+  background: purple;
+  /* scrollview 横向滑动 必须设置不换行 white-space: nowrap;属性*/
+  white-space: nowrap;
+}
+.v1{
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 10px;
+  display: inline-block;
+}
+
+.container2{
+  background: blue;
+  /* 
+    scrollview 纵向滚动 如果是局部滚动就必须设置 height 高度；
+   */
+  height: 300px;
+  margin-top: 20px;
+}
+.v2{
+  height: 100px;
+  background: orange;
+  margin: 10px;
+}
