@@ -7,7 +7,8 @@
     "pages/text/text",
     "pages/button/button",
     "pages/view/view",
-    "pages/images/image"
+    "pages/images/image",
+    "pages/input/input"
   ],
   "sitemapLocation": "sitemap69.json",
   "window": {

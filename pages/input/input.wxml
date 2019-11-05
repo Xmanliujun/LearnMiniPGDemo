@@ -1,0 +1,20 @@
+<!--pages/input/input.wxml-->
+<text>input 组件</text>
+<!-- input的基本使用
+https://developers.weixin.qq.com/miniprogram/dev/component/input.html
+  可以单标签使用<input/>
+ -->
+<input/>
+<!-- 2、value： input初始化值 -->
+<input value="讲讲价"></input>
+<!-- 3、tpye: input 键盘类型 -->
+<input type="number" value="123123"></input>
+<!-- 4、password 暗文 -->
+<input password="{{true}}" value="123"></input>
+<!-- 5、placeholder 占位符 -->
+<input placeholder="请输入文字"></input>
+<!-- 6、input 绑定事件 -->
+<input bindinput="handleInput"
+       bindfocus="handleFocus"
+       bindblur="handleBlur"></input>
+
