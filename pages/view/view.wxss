@@ -1,0 +1,41 @@
+/* pages/view/view.wxss */
+
+.b1{
+  background: yellow;
+  width: 200px;
+  height: 200px;
+}
+.text1{
+  text-align: center;
+  background: red;
+ 
+  /* 设置文字水平垂直居中 ，设置布局大小*/
+  display: table-cell;
+  vertical-align:middle;
+  width: 200px;
+  height: 100px;
+}
+.box{
+  background-color: red;
+}
+.box1{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: blue;
+  margin-top: 20px;
+}
+
+.hover-class{
+  background: orange;
+  font-size: 20px;
+}
+
+.box2{
+  background: green;
+  width: 200px;
+  height: 200px;
+}
+.hover-class2{
+  background: red;
+}

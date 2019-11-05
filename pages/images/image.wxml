@@ -1,0 +1,47 @@
+<!--pages/images/image.wxml-->
+<text>image组件</text>
+<!-- 
+https://developers.weixin.qq.com/miniprogram/dev/component/image.html
+  重点：
+    1.image组件可以写成单标签，也可以写成双标签
+<image></image> 双标签
+<image/> 单标签结尾加/
+默认宽度320  高度240
+image是一个行内块级元素
+
+设置图片：src 可以以设置本地图片，和网络图片
+相对路径 ../../assets/images/tabBar/m0.png
+绝对路径 /assets/images/tabBar/m0.png
+网络图片  https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg
+ -->
+
+<image src="../../assets/images/tabBar/m0.png"></image>
+<image src="/assets/images/tabBar/m0.png"></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- 补充：显示相册中的图片 -->
+<button bindtap="buttonImagesClick">选中图片</button>
+<image src="{{imageFile}}"></image>
+
+<!-- 3.bindload  监听图片加载完成  lazy-load="{{true}}" 图片懒加载-->
+<image wx:for='{{1}}' src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" bindload="handleImageLoad" lazy-load="{{true}}"></image>
+
+<!-- 4、show-menu-by-longpress 长按图片出现小程序识别 -->
+<image src="/assets/images/er.png" show-menu-by-longpress="{{true}}" ></image>
+
+<!-- 5、mode 裁剪属性
+scaleToFill：不保持纵横比缩放图片，使图片完全适应
+aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来
+aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来
+top：不缩放图片，只显示图片的顶部区域
+bottom：不缩放图片，只显示图片的底部区域
+center：不缩放图片，只显示图片的中间区域
+left：不缩放图片，只显示图片的左边区域
+right：不缩放图片，只显示图片的右边边区域
+top left：不缩放图片，只显示图片的左上边区域
+top right：不缩放图片，只显示图片的右上边区域
+bottom left：不缩放图片，只显示图片的左下边区域
+bottom right：不缩放图片，只显示图片的右下边区域
+
+ -->
+<image mode="top" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>

@@ -1,0 +1,27 @@
+<!--pages/button/button.wxml-->
+<text>button组件</text>
+<!-- https://developers.weixin.qq.com/miniprogram/dev/component/button.html -->
+<!-- button基本使用 -->
+<button>按钮</button>
+
+<!-- 2.size属性：mini -->
+<button size="mini">mini</button>
+<button size="mini">mini</button>
+
+<!-- 3.type属性：primary绿色、default默认、warn红色 -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+
+<!-- 4. plain： 镂空效果 带边框 -->
+<button size="mini" plain>按钮</button>
+
+<!-- 5.disable 不可用 -->
+<button size="mini" disabled>按钮</button>
+<!-- 6.loading -->
+<button size="mini" loading>按钮</button>
+<!-- 动态控制loading 效果 -->
+<button size="mini" loading='{{isLoading}}'>按钮</button>
+
+<!-- 7.hover-class  wxss绑定class类在设置样式-->
+<button hover-class='pressed'>按钮</button>

@@ -21,11 +21,57 @@ Page({
       { id: 2, name: 'b', age: 13 },
       { id: 3, name: 'c', age: 14 },
       { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
+      { id: 5, name: 'e', age: 17 },
+      { id: 4, name: 'd', age: 15 },
       { id: 5, name: 'e', age: 17 }
     ],
     counter:0,
-    apName:"未获取"
+    apName:"未获取",
+    list:[]
   },
+  //success 方法不同，与this的使用
+  // wx:wx.request({
+  //   url: '请求地址',
+  //   success: (res) => {
+  //    const data = res.data.dada.list
+  //     this.setData({
+  //       list:data
+  //     })
+  //   },
+  //   fail: function(res) {},
+  //   complete: function(res) {},
+  // }),
+  // wx:wx.request({
+  //   url: '请求地址',
+  //   success: function(res){
+  //    const data = res.data.dada.list
+  //     _this.setData({
+  //       list:data
+  //     })
+  //   },
+  //   fail: function(res) {},
+  //   complete: function(res) {},
+  // }),
 
   handleBtnClick(){
     this.setData({
@@ -50,7 +96,11 @@ Page({
       apName: aname
     })
   },
-
+  // 界面滑动监听事件
+  onPageScroll(obj){
+    console.log(obj)
+  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -90,6 +140,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    console.log("下拉刷新事件")
 
   },
 
@@ -97,6 +148,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    console.log("界面滚动到底部事件")
 
   },
 

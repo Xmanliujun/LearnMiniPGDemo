@@ -83,11 +83,26 @@ App.js中定义的全局数据，可以在其他界面的js中获取到
     age:20
   }
   home.js中获取
-  
+
+  /* 设置文字水平垂直居中 ，设置布局大小*/
+  display: table-cell;
+  vertical-align:middle;
+  width: 200px;
+  height: 100px;
+
 
 */ 
 
 /**
+终端进入文件夹
+git init
+git add .
+git commit -m '备注'
+git remote add origin https: //github.com/Xmanliujun/LearnMiniPGDemo.git (github仓库地址)
+输入git账号 和 密码
+git push -u origin master
+上传完成
+
 版本tag分支
 git add .  加入本地git
 git commit -m  ‘更新代码 ’（’’里加提交备注）

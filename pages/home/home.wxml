@@ -18,3 +18,5 @@
 <!-- <open-data type="userAvatarUrl"></open-data> -->
 
 <button size="mini" bindtap="buttonGetappData">获取app.js中数据--{{apName}}</button>
+<!-- url请求 返回数据界面展示 -->
+<!-- <view wx:for="{{list}}">{{item.title}}</view> -->

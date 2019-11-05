@@ -1,0 +1,19 @@
+<!--pages/view/view.wxml-->
+<text>pages/view/view.wxml</text>
+<!-- 1.view的基本使用 块级元素独占一行-->
+<view class="box">123</view>
+<view>456</view>
+
+<view class="b1">
+  <text class="text1">在view中</text>
+</view>
+<!-- 2.hover-class 当用户按下组件之后的时候，显示的样式 ，原有样式需要class设置，按下之后样式使用hover-class设置
+      hover-stay-time 设置松手停留时间
+      hover-stop-propagation="true" 阻止父类点击事件，以防手势冲突
+-->
+<view class="box1">box1</view>
+<view class="box1" hover-class="hover-class" hover-stay-time="0" >hover-class</view>
+
+<view class="box2" hover-class="hover-class2">
+  <view class="box1" hover-class="hover-class" hover-stay-time="0"   hover-stop-propagation="true">hover-class</view>
+</view>
