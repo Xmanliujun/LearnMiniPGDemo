@@ -1,0 +1,10 @@
+.rp1{
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+.rp2{
+  width: 200rpx;
+  height: 200rpx;
+  background: purple;
+}

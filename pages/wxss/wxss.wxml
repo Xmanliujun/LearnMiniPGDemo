@@ -1,0 +1,58 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 
+https://developers.weixin.qq.com/miniprogram/dev/extended/weui/
+
+https://developers.weixin.qq.com/miniprogram/dev/extended/weui/quickstart.html
+
+https://github.com/Tencent/weui-wxss/
+
+ -->
+
+<text>wxss样式</text>
+<!-- 设置样式三种方式 -->
+
+<!-- 1、行内 内联样式 -->
+<view style="color:red; font-size:32px;">行内（内联）样式</view>
+
+<!-- 2、页内 样式 -->
+<view class="box">页内 样式</view>
+
+<!-- 3、全局 样式 -->
+<view class="box2">全局 样式在app.wxss中设置</view>
+
+<!-- 三种样式作用于同一个组件 
+  行内内最高级，页内其次，全局最后
+  !important 加入这个权重最大
+-->
+<view style="background:red;" class="box33">三种样式作用于同一个组件</view>
+
+<!-- 4、wxss中的单位： rpx 适配
+前端也需要进行尺寸适配:em/rem/vw/wh
+rpx单位是px单位的一半，200rpx== 100px
+iPhone 6 作为基础设计
+-->
+<view class="rp1">单位</view>
+<view class="rp2">rpx 单位适配</view>
+<view class="text1">px哈哈哈</view>
+<view class="text2">rpx呵呵呵</view>
+
+<!-- 全局设置样式，已导入文件方式 -->
+<button class="btn">按钮</button>
+
+<!-- 搜索框 -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+    <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+      <icon class="weui-icon-search" type="search" size="14"></icon>
+      <view class="weui-search-bar__text">搜索</view>
+    </label>
+  </view>
+  <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>

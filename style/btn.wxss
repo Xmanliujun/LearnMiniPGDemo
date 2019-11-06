@@ -1,0 +1,9 @@
+/* 
+  相同的样式 可以设置全局样式 在app.wxss中
+ */
+.btn{
+  width: 240rpx;
+  height: 80rpx;
+  display: inline-block;
+  border: 1px solid red;
+}

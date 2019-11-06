@@ -1,0 +1,30 @@
+/* pages/wxss/wxss.wxss */
+/* 导入样式文件 相同的样式可以进行封装*/
+@import './style/box.wxss';
+@import './style/text.wxss';
+@import './style/rpx.wxss';
+@import './style/weui-searchbar.wxss';
+
+/* .box{
+  color: blue;
+  font-size: 32px;
+}
+.box33{
+  color: purple;
+} */
+/* .rp1{
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+.rp2{
+  width: 200rpx;
+  height: 200rpx;
+  background: purple;
+} */
+/* .text1{
+  font-size: 32px;
+}
+.text2{
+  font-size: 64rpx;
+} */

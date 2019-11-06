@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -109,6 +109,13 @@
 					"id": -1,
 					"name": "scrollview组件",
 					"pathName": "pages/scrollview/scrollview",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wxss设置三种样式方式",
+					"pathName": "pages/wxss/wxss",
 					"scene": null
 				}
 			]

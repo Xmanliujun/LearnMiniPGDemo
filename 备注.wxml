@@ -92,7 +92,21 @@ App.js中定义的全局数据，可以在其他界面的js中获取到
 
 
   共同属性：
-  id、class、style、hidden、data
+  id、class、style（组件内联样式）、hidden、data
+
+  wxss目录中 有导入样式文件方法，三种样式方法，优先级介绍
+  @import './style/box.wxss';
+  
+  引用UI库例子
+  @import './style/weui-searchbar.wxss';
+  
+  三种样式作用于同一个组件 
+  行内内最高级，页内其次，全局最后
+  !important 加入这个权重最大
+  
+  全局样式引入
+  在app.wxss中 @import './style/btn.wxss';
+
 
 */ 
 

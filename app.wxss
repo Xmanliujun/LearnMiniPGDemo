@@ -1,0 +1,8 @@
+@import './style/btn.wxss';
+.box2{
+  color:orange;
+  font-size: 30px;
+}
+.box33{
+  color: green;
+}
