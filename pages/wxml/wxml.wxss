@@ -1,1 +1,10 @@
 /* pages/wxml/wxml.wxss */
+.wx-box{
+  font-size: 64rpx;
+  background: red;
+
+}
+.active{
+  font-size: 64rpx;
+  color: blue;
+}

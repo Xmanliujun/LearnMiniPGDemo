@@ -1,0 +1,26 @@
+<!--pages/页面跳转/navigator1/navigator1.wxml-->
+<!-- 
+https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html
+ -->
+<text>页面跳转 第一页 </text>
+<!-- 1、页面跳转 -->
+<navigator url="/pages/页面跳转/navigator2/navigator2">跳转到其他页面</navigator>
+ <view>-----------------------</view>
+<!-- 2、open-type 属性navigate(默认) redirect、switchTab、reLaunch、navigateBack、exit-->
+<navigator url="/pages/页面跳转/navigator2/navigator2" open-type="redirect">redirect跳转到其他页面</navigator>
+<!-- tabBar 相关在home文件中
+<navigator url="/pages/about/about" open-type="switchTab">switchTab跳转到tabBar界面</navigator>
+ -->
+
+ <navigator url="/pages/页面跳转/navigator2/navigator2" open-type="reLaunch">reLaunch跳转到其他页面</navigator>
+
+ <view>-----------------------</view>
+ <!-- 跳转过程传递数据 -->
+ <navigator url="/pages/页面跳转/navigator2/navigator2?name=liu&age=30" >跳转过程传递数据</navigator>
+
+ <view>-----------------------</view>
+ <view>{{titleData}}</view>
+
+ <view>-----------------------</view>
+ <!-- 4、通过代码进行页面跳转 -->
+ <button size="mini" bindtap="navClick">按钮跳转界面</button>

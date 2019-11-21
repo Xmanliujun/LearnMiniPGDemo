@@ -1,0 +1,7 @@
+<!--自定义组件/my-mslot多个插槽的使用/my-mslot.wxml-->
+<!-- 绑定多插槽的时候 需要绑定插槽name 指定插槽位置 -->
+<view>我是my-mslot组件的开始</view>
+<view class="slot1"><slot name="slot1"/></view>
+<view class="slot2"><slot name="slot2"/></view>
+<view class="slot3"><slot name="slot3"/></view>
+<view>我是my-mslot插槽的结尾</view>

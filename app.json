@@ -11,8 +11,19 @@
     "pages/input/input",
     "pages/scrollview/scrollview",
     "pages/wxss/wxss",
-    "pages/wxml/wxml"
+    "pages/wxml/wxml",
+    "pages/wxs/wxs",
+    "pages/onCilck/oncilck",
+    "pages/组件使用/home",
+    "pages/http/HttpHome/httphome",
+    "pages/页面跳转/navigator1/navigator1",
+    "pages/页面跳转/navigator2/navigator2",
+    "pages/页面跳转/navigate3/navigate3"
   ],
+  "usingComponents": {
+    "cpn": "/自定义组件/cpn/cpn",
+    "my_cpn": "/自定义组件/my_cpn/my_cpn"
+  },
   "sitemapLocation": "sitemap69.json",
   "window": {
     "navigationBarBackgroundColor": "#ff5777",

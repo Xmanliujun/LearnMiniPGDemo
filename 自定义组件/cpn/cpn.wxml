@@ -1,0 +1,2 @@
+<!--自定义组件/cpn/cpn.wxml-->
+<view class="cpn">我是cpn</view>

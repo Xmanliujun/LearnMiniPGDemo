@@ -1,0 +1,73 @@
+<!--pages/组件使用/home.wxml-->
+<text class="title">组件使用</text>
+<!-- 1、使用自定义组件 -->
+<my_cpn></my_cpn>
+<my_cpn/>
+<!-- 2、自定义组件的样式细节 -->
+<!-- 组件中class和外部命名一样，也不会对页面内的造成影响 组件中只能使用类选择器 class-->
+<!--  
+https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html#%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%E9%9A%94%E7%A6%BB
+-->
+<my_style/>
+<view>----组件传递数据-----</view>
+<!-- 传递数据 -->
+<my-prop heard="---home传值" contentText="**传值contentText数据"></my-prop>
+<my-prop heard="---使用my-prop.js中properties属性" contentText="++contentText传数据"></my-prop>
+
+<!-- 传递样式的时候 ，
+  ** 需要在组件js中实现 
+     externalClasses: ['titlecolor'] 对应属性
+  ** 在当前界面的wxss 文件中实现对应的样式
+     .red{
+        color: red;
+      }
+-->
+<my-prop heard="---home传值" contentText="**传值颜色数据" titlecolor="red"></my-prop>
+
+
+<!-- 事件在组件中声明，并且在js中声明方法，通过  this.triggerEvent('addNum',{name:"传值",age:20},{其他参数}) 进行传递，addNum是关键字key，在当前界面就能拿到该事件，进行声明。并且在当前js中声明绑定方法
+进行逻辑操作 相应的name 在event.detail 都能获取到
+ -->
+<view>----组件内部发出事件-----</view>
+<view>当前计数：{{counter}}</view>
+<my-event bind:addNum="handleaddNum"/>
+
+
+
+<!-- tab-control练习 -->
+<view>----tab-control----------------</view>
+<w-tab-control titles="{{['衣服','美妆','儿童']}}"
+              bind:itemData="handleTabitemData"/>
+
+
+<view>------页面直接调用组件修改数据和方法----------</view>
+<button size="mini" bind:tap="handleSelect">修改组件内部数据</button>
+<!-- class 和 id 绑定一个就可以 推荐id -->
+<my-select class="myselect-class" id="myselect-id"/>
+
+<!-- 单个插槽的使用 -->
+<view>---------slot插槽的使用----------</view>
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+<my-slot>
+  <text>我是插入的文本</text>
+</my-slot>
+<my-slot>
+  <image src="/assets/images/tabBar/ma.png"></image>
+</my-slot>
+<my-slot>
+  <slider value="10"></slider>
+</my-slot>
+<view>--------slot多插槽的使用-----------</view>
+<!-- 
+  注意事项：
+    1、给每一个插槽起一个名字： name属性
+    2、必须在Component对象中添加一个选项：options:{multipleSlots:true}属性
+  }
+ -->
+<my-mslot>
+  <button size="mini" slot="slot2">我是插入的按钮</button>
+  <slider value="30" slot="slot1"></slider>
+  <text slot="slot3">slot3插槽替换</text>
+</my-mslot>

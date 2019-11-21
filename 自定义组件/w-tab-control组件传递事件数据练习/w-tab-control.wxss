@@ -1,0 +1,21 @@
+/* 自定义组件/w-tab-control/w-tab-control.wxss */
+.tab-control{
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: paleturquoise;
+}
+.tab-item{
+  flex: 1;
+  text-align: center;
+}
+.active{
+  color: red;
+}
+/* 
+  下划线效果
+ */
+.active text{
+    border-bottom: 6rpx solid red;
+    padding: 20rpx 20rpx;
+}

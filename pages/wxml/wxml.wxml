@@ -1,2 +1,100 @@
 <!--pages/wxml/wxml.wxml-->
-<text>pages/wxml/wxml.wxml</text>
+<text>wxml-Mustache语法细节</text>
+
+<include src="/template/header.wxml"/>
+
+<!-- 1、wxml格式 
+闭合
+<view></view>
+<image/>
+-->
+<!-- Mustache -->
+<view>{{Msg}}</view>
+<view>{{firstName}} {{lastName}}</view>
+<view>{{firstName +' '+ lastName}}</view>
+<view>{{age >= 18 ? '成年人' : '未成年人'}}</view>
+<!-- 获取实时时间 -->
+<view>{{nowTime}}</view>
+
+<!-- 获取class 进行标签操作 -->
+<button size="mini" bindtap="buttonClick">切换颜色</button>
+<view class="wx-box {{isActive ? 'active' : ''}}" >哈哈哈</view>
+
+<!-- <map class="map" longitude="116.11" latitude="39.6"></map> -->
+
+<view>------条件判断-------</view>
+<!-- wx:if 的使用 -->
+<button size="mini" bindtap="buttonIfCilck">显示隐藏</button>
+<view wx:if="{{isShow}}">条件判断</view>
+
+<button size="mini" bindtap="buttonUpCilck">更改变量</button>
+<view wx:if="{{score >=90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 70}}">及格</view>
+<view wx:else>不及格</view>
+<view>------------------</view>
+<!-- hidden 隐藏 后台是有组件显示的
+      wx:if 隐藏 后台是不显示组件的 ，wx:if的是隐藏是 通过 创建和销毁
+      如果显示隐藏的频率非常高，就使用hidden
+      
+ -->
+<button size="mini" bindtap="buttonHiddenClick">hidden属性</button>
+<view hidden="{{isHidden}}">hidden属性控制的内容</view>
+<view>---------列表渲染---------</view>
+<!-- 1.wx:for回顾 -->
+<!-- 1.1遍历数组、字符串、数字 -->
+<view wx:for="{{['2','3','4','5']}}">{{item}}</view>
+<!-- <view wx:for="coderwhy">{{item}} {{index}}</view>
+<view wx:for ="{{9}}">{{item}}</view> -->
+<view>---------block标签---------</view>
+<!-- 2.block标签 block包裹之后不会进行渲染 ，
+他不是组件，仅仅是一个包装元素，只接受控制属性
+性能更高
+1、将需要进行遍历或者判断的内容进行包裹
+2、将遍历和判断的属性放在block中，不影响普通属性的阅读，提高代码可读性
+-->
+<block wx:for="{{2}}">
+  <button>按钮</button>
+  <text>啊啊啊</text>
+  <view>哈哈哈</view>
+</block>
+<view>---------item、index 另起名---------</view>
+<!-- 另起名字用在 多重遍历 -->
+<!-- <view wx:for="{{movies}}">{{item}}</view> -->
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}} -- {{i}}</view>
+<view>----二维数据遍历-----</view>
+<block wx:for="{{arrays}}" wx:for-item="innerarray">
+  <block wx:for="{{innerarray}}">
+    <view>{{item}}</view>
+  </block>
+</block>
+<view>-----key的作用----</view>
+<!-- 以上遍历代码都有警告提示，
+    小程序如果数组里是唯一标示的时候 使用key绑定 wx:key="{{item}}" 提高性能
+ -->
+<view wx:for="{{['a','b','c']}}" wx:key="{{item}}">{{item}}</view>
+
+<!-- 模板 -->
+<view>-------template--------</view>
+<!-- 小程序不支持自定义组件，为了进行代码复制用：template -->
+<!-- <template name="tpitem">
+  <button size="mini">{{buttontext}}</button>
+  <view>{{content}}</view>
+</template> -->
+<!-- 导入封装的路径 
+import导入： 以下代码有实例
+  1、主要是导入template
+  2、特点：不能进行递归导入
+include引入： header.wxml 实例中
+  1、将公共的wxml中的组件抽取到一个文件中
+  2、特点：不能导入template/wxs,可以进行递归导入
+
+-->
+<import src="/template/template.wxml"/>
+<template is="tpitem" data="{{buttontext:buttontext ,content:'111'}}"/>
+<import src="/template/abc.wxml"/>
+<template is="abc" data="{{buttontext:'abc' ,content:'abc导入头文件'}}"/>
+
+<view>------调用函数错误形式,正确在wxs文件夹中说明-----------</view>
+<!-- 调用函数错误形式 -->
+<view>{{numberToFixed(25.6666666)}}</view>

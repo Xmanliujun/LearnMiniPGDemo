@@ -1,0 +1,8 @@
+<!--pages/页面跳转/navigator2/navigator2.wxml-->
+<text>页面跳转 第二页 </text>
+<!-- 只能和上级界面中设置 open-type 属性navigate(默认) 一起使用  -->
+<navigator open-type="navigateBack">返回</navigator>
+<view>------------------</view>
+<navigator url="/pages/页面跳转/navigate3/navigate3">跳转到下级界面</navigator>
+<view>------------------</view>
+<button size="mini" bind:tap="backNavClick">返回按钮</button>

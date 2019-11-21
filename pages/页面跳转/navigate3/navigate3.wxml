@@ -1,0 +1,6 @@
+<!--pages/页面跳转/navigate3/navigate3.wxml-->
+<text>页面跳转 第三页 </text>
+<!-- 返回首页 delta="2" 返回层级数-->
+<navigator open-type="navigateBack" delta="2">返回首页</navigator>
+<view>------------------</view>
+<button size="mini" bind:tap="backNavClick">返回按钮</button>

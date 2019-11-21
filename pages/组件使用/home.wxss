@@ -1,0 +1,8 @@
+/* pages/组件使用/home.wxss */
+.title{
+  font-size: 60rpx;
+  color: red;
+}
+.red{
+  color: red;
+}

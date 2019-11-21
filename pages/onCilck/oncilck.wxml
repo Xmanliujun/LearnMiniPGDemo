@@ -1,0 +1,73 @@
+<!--pages/onCilck/oncilck.wxml-->
+<!-- 
+https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html#%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3
+ -->
+<view>点击事件处理</view>
+<!-- 事件回顾 -->
+<button size="mini" bindtap="handlebtnOnClick">按钮</button>
+<button size="mini" bind:tap="handlebtnOnClick">新方法</button>
+<button size="mini" catch:tap="handlebtnOnClick">catch按钮</button>
+<!-- 
+  input 有bindinput/bindblur/bindfocus等
+  scroll-view有bindscrolltowpper/bindscrolltolower等
+
+touchstart 	手指触摸动作开始 	
+touchmove 	手指触摸后移动 	
+touchcancel 	手指触摸动作被打断，如来电提醒，弹窗 	
+touchend 	手指触摸动作结束 	
+tap 	手指触摸后马上离开 	
+longpress 	手指触摸后，超过350ms再离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发 	1.5.0
+longtap 	手指触摸后，超过350ms再离开（推荐使用longpress事件代替） 	
+transitionend 	会在 WXSS transition 或 wx.createAnimation 动画结束后触发 	
+animationstart 	会在一个 WXSS animation 动画开始时触发 	
+animationiteration 	会在一个 WXSS animation 一次迭代结束时触发 	
+animationend 	会在一个 WXSS animation 动画完成时触发 	
+touchforcechange 	在支持 3D Touch 的 iPhone 设备，重按时会触发
+
+ -->
+<!-- 常见的一些事件 -->
+<view class="box"
+      bind:touchstart="handletouchstart"
+      bind:touchmove="handletouchmove"
+      bind:touchend="handletouchend"
+      bind:tap="handletap"
+      bind:longpress="handlelongpress"
+
+></view>
+
+<button size="mini" bindtap="handleEventClick">按钮</button>
+
+<view class="outer" bindtap="handleouter">
+  <view class="inner" bindtap="handleinner"></view>
+</view>
+
+<!-- 事件的传递参数 
+data-index《index是起名字，可以随便起》="{{index}}《要传的参数》",
+-->
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view class="item"
+          bindtap="handleItemClick" 
+          data-index="{{index}}"
+          data-item="{{item}}"
+    >{{item}}</view>
+  </block>
+</view>
+<!-- 事件冒泡和事件捕获 
+capture-bind:tap 监听事件捕获
+bindtap 监听事件冒泡
+bind 会一层一层传递
+catch 阻止事件进一步传递
+-->
+
+<!-- <view class="view1" capture-bind:tap="handlecaptureview1" bindtap="handleview1">view1
+  <view class="view2" capture-catch:tap="handlecaptureview2" bindtap="handleview2">view2
+    <view class="view3" capture-bind:tap="handlecaptureview3" bindtap="handleview3">view3</view>
+  </view>
+</view> -->
+
+<view class="view1" capture-bind:tap="handlecaptureview1" bindtap="handleview1">view1
+  <view class="view2" capture-bind:tap="handlecaptureview2" catchtap="handleview2">view2
+    <view class="view3" capture-bind:tap="handlecaptureview3" bindtap="handleview3">view3</view>
+  </view>
+</view>

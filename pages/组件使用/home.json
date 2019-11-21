@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "my_cpn":"/自定义组件/my_cpn/my_cpn",
+    "my_style":"/自定义组件/my_style/my_style",
+    "my-prop":"/自定义组件/my-prop给组件传数据和样式/my-prop",
+    "my-event":"/自定义组件/my-event组件往外传递事件和参数/my-event",
+    "w-tab-control":"/自定义组件/w-tab-control组件传递事件数据练习/w-tab-control",
+    "my-select":"/自定义组件/my-sele页面直接调用组件修改数据和方法/my-select",
+    "my-slot":"/自定义组件/my-slot插槽/my-slot",
+    "my-mslot":"/自定义组件/my-mslot多个插槽的使用/my-mslot"
+
+  }
+}

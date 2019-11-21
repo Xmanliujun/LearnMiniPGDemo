@@ -1,4 +1,7 @@
 <!--pages/home/home.wxml-->
+<!-- tabBar 相关在home文件中 -->
+<navigator url="/pages/about/about" open-type="switchTab">switchTab跳转到tabBar界面</navigator>
+
 <text class="title">小程序数据绑定</text>
  <!-- 1.小程序数据绑定 -->
 <view>Hello {{name}}</view>

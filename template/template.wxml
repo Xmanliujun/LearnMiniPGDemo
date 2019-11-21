@@ -1,0 +1,5 @@
+
+<template name="tpitem">
+  <button size="mini">{{buttontext}}</button>
+  <view>{{content}}</view>
+</template>

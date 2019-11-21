@@ -107,6 +107,109 @@ App.js中定义的全局数据，可以在其他界面的js中获取到
   全局样式引入
   在app.wxss中 @import './style/btn.wxss';
 
+wxml文件包中内容
+Mustache语法细节、
+<view>{{Msg}}</view>
+<view>{{firstName}} {{lastName}}</view>
+<view>{{firstName +' '+ lastName}}</view>
+<view>{{age >= 18 ? '成年人' : '未成年人'}}</view>
+ 获取实时时间 
+<view>{{nowTime}}</view>
+获取class 进行标签操作 
+<button size="mini" bindtap="buttonClick">切换颜色</button>
+<view class="wx-box {{isActive ? 'active' : ''}}" >哈哈哈</view>
+
+条件判断 
+wx:if  wx:elif  wx:else
+wx:if 的使用 
+<button size="mini" bindtap="buttonIfCilck">显示隐藏</button>
+<view wx:if="{{isShow}}">条件判断</view>
+
+wx:if  wx:elif  wx:else
+<button size="mini" bindtap="buttonUpCilck">更改变量</button>
+<view wx:if="{{score >=90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 70}}">及格</view>
+<view wx:else>不及格</view>
+
+
+ 2.block标签 block包裹之后不会进行渲染 ，
+他不是组件，仅仅是一个包装元素，只接受控制属性
+性能更高
+1、将需要进行遍历或者判断的内容进行包裹
+2、将遍历和判断的属性放在block中，不影响普通属性的阅读，提高代码可读性
+
+<block wx:for="{{2}}">
+  <button>按钮</button>
+  <text>啊啊啊</text>
+  <view>哈哈哈</view>
+</block>
+
+ 事件的传递参数 
+data-index《index是起名字，可以随便起》="{{index}}《要传的参数》"
+
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view class="item"
+          bindtap="handleItemClick" 
+          data-index="{{index}}"
+          data-item="{{item}}"
+    >{{item}}</view>
+  </block>
+</view>
+
+
+ 事件冒泡和事件捕获 
+capture-bind:tap 监听事件捕获
+bindtap 监听事件冒泡
+bind 会一层一层传递
+catch 阻止事件进一步传递
+<!-- <view class="view1" capture-bind:tap="handlecaptureview1" bindtap="handleview1">view1
+  <view class="view2" capture-catch:tap="handlecaptureview2" bindtap="handleview2">view2
+    <view class="view3" capture-bind:tap="handlecaptureview3" bindtap="handleview3">view3</view>
+  </view>
+</view> 
+
+
+
+
+组件使用
+my-cpn 是组件使用时候的标签名称
+ 在对用使用的json文件中创建
+{
+  "usingComponents": {
+    "my-cpn":"/自定义组件/my-cpn/my-cpn"
+  }
+}
+在对应的wxml中使用 创建的标签 my-cpn 自定义组件
+<my-cpn></my-cpn>
+** 自定义组件可以在app.json中声明，在app.json中加入以下节点 进行声明，全局都可以使用
+但是这样容易逻辑不清楚，公共组件可以这样声明，嵌套组件最近是在对应文件的json中声明
+"usingComponents": {
+    "my-cpn":"/自定义组件/my-cpn/my-cpn"
+  }
+
+
+
+
+小程序登录流程
+在App.js的onLaunch函数中操作
+code只有5分钟有效时间
+ wx.login({
+      success:function(res){
+        console.log('微信登录获取code',res.code)
+      }
+  })
+
+相关登录流程在 app.js 中有详细标注
+
+login  登录函数
+check_token  验证token函数
+globalData 存储数据
+wx.setStorageSync(TOKEN, token) 存入缓存
+const token = wx.getStorageSync(TOKEN) 获取本地
+
+
 
 */ 
 

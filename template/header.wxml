@@ -1,0 +1,5 @@
+<!-- 循环引入 -->
+<include src="./nav.wxml"/>
+<view>
+<view>include导入文件-标题</view>
+</view>

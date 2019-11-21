@@ -1,0 +1,12 @@
+<!--pages/http/HttpHome/httphome.wxml-->
+<!-- https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html -->
+<text>pages/http/HttpHome/httphome.wxml</text>
+<view>网络加载提示窗口</view>
+<button size="mini" bindtap="onToastClick">showToast</button>
+<button size="mini" bindtap="onLoadingClick">showLoading</button>
+<view>提示用户确认选择提示窗口</view>
+<button size="mini" bindtap="onModalClick">showModal</button>
+<view>调用相机、相册提示窗口</view>
+<button size="mini" bindtap="onActionSheetClick">showActionSheet</button>
+<view>分享按钮</view>
+<button size="mini" open-type="share">Share</button>

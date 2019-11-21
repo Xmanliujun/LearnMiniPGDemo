@@ -1,0 +1,2 @@
+<!--自定义组件/my-event/my-event.wxml-->
+<button size="mini" bind:tap="handleaddClick">+1</button>

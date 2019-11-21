@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cpn": "/自定义组件/cpn/cpn"
+  }
+}

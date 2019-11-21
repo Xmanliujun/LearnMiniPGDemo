@@ -1,0 +1,9 @@
+/* 自定义组件/my_style/my_style.wxss */
+.title{
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.content{
+  font-size: 30rpx;
+  
+}

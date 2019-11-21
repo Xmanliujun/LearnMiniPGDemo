@@ -1,0 +1,7 @@
+<!--自定义组件/my-sele页面直接调用组件修改数据和方法/my-select.wxml-->
+<!-- 方法有两种一种是在 使用的页面直接通过id和this.selectComponent('.myselect-class') 方法获取组件对象进行修改，但是这样不规范。
+第二种方法是在组件js文件methods方法中暴露一个方法 进行修改
+ -->
+<view>外界 调用组件内的计数：{{counter}}</view>
+
+
